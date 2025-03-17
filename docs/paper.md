@@ -137,4 +137,7 @@ The incident at the Google Cloud data center in London highlighted the need for 
 2. ASHRAE. (2022). *Thermal Guidelines for Data Processing Environments*.  
 3. Nvidia. (2022). *Liquid Cooling Solutions for High-Density Data Centers*.  
 4. Google Cloud Status Dashboard. (2022). *Incident Report for London Data Center*.  
-5. Uptime Institute. (2023). *Annual Outage Analysis 2023*.  
+5. Uptime Institute. (2023). *Annual Outage Analysis 2023*.
+6. Quantum Climate Prediction System (QCPS)
+https://github.com/scoobiii/QCPS
+8. **Author**: José S Sobrinho, deep seek, gpt, google ai studio
