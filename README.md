@@ -43,35 +43,35 @@ Nome do Projeto: Quantum Climate Prediction System (QCPS)
 
 Estrutura do Repositório GitHub
 
-quantum-climate-prediction-system/
-  │
-  ├── src/                      # Código-fonte do sistema
-  │   ├── quantum_simulator/    # Implementação do simulador quântico
-  │   ├── classical_simulator/  # Implementação do simulador clássico
-  │   ├── data/                 # Arquivos de dados
-  │   │   └── london_temperatures/
-  │   │       ├── 1940-2020.csv
-  │   │       └── 2021-2022.csv
-  │   ├── models/               # Modelos de Machine Learning e Quantum
-  │   │   ├── prediction_model.py
-  │   │   └── quantum_model.py
-  │   └── utils/                # Funções auxiliares
-  │       ├── data_preprocessing.py
-  │       └── temperature_analysis.py
-  │
-  ├── tests/                    # Testes automatizados
-  │   ├── test_quantum_simulator.py
-  │   ├── test_classical_simulator.py
-  │   └── test_prediction_models.py
-  │
-  ├── notebooks/                # Notebooks de análise e experimentação
-  │   ├── temperature_analysis.ipynb
-  │   └── quantum_model_experiments.ipynb
-  │
-  ├── requirements.txt          # Dependências do projeto
-  ├── Dockerfile                # Arquivo para criar container
-  ├── README.md                 # Documentação do projeto
-  └── .gitignore                # Arquivo para ignorar arquivos desnecessários
+  quantum-climate-prediction-system/
+    │
+    ├── src/                      # Código-fonte do sistema
+    │   ├── quantum_simulator/    # Implementação do simulador quântico
+    │   ├── classical_simulator/  # Implementação do simulador clássico
+    │   ├── data/                 # Arquivos de dados
+    │   │   └── london_temperatures/
+    │   │       ├── 1940-2020.csv
+    │   │       └── 2021-2022.csv
+    │   ├── models/               # Modelos de Machine Learning e Quantum
+    │   │   ├── prediction_model.py
+    │   │   └── quantum_model.py
+    │   └── utils/                # Funções auxiliares
+    │       ├── data_preprocessing.py
+    │       └── temperature_analysis.py
+    │
+    ├── tests/                    # Testes automatizados
+    │   ├── test_quantum_simulator.py
+    │   ├── test_classical_simulator.py
+    │   └── test_prediction_models.py
+    │
+    ├── notebooks/                # Notebooks de análise e experimentação
+    │   ├── temperature_analysis.ipynb
+    │   └── quantum_model_experiments.ipynb
+    │
+    ├── requirements.txt          # Dependências do projeto
+    ├── Dockerfile                # Arquivo para criar container
+    ├── README.md                 # Documentação do projeto
+    └── .gitignore                # Arquivo para ignorar arquivos desnecessários
 
 Descrição do Projeto:
 
