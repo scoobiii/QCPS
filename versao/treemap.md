@@ -10,63 +10,63 @@ Atualização da Estrutura do Repositório:
 
 A nova estrutura do repositório será ajustada para incluir a parte de monitoramento de recursos e visualização. Abaixo estão as atualizações:
 
-quantum-climate-prediction-system/
-│
-├── src/
-│   ├── quantum_simulator/
-│   ├── classical_simulator/
-│   ├── data/
-│   ├── models/
-│   ├── utils/
-│   ├── monitoring/               # Nova pasta para monitoramento de recursos
-│   │   ├── resource_monitor.py    # Monitoramento de CPU, GPU, TPU, QPU, etc.
-│   │   ├── treemap_visualization.py # Função para gerar o treemap
-│
-├── tests/
-│   ├── test_quantum_simulator.py
-│   ├── test_classical_simulator.py
-│   └── test_prediction_models.py
-│
-├── notebooks/
-│   ├── temperature_analysis.ipynb
-│   └── quantum_model_experiments.ipynb
-│
-├── requirements.txt
-├── Dockerfile
-├── README.md
-└── .gitignore
+    quantum-climate-prediction-system/
+    │
+    ├── src/
+    │   ├── quantum_simulator/
+    │   ├── classical_simulator/
+    │   ├── data/
+    │   ├── models/
+    │   ├── utils/
+    │   ├── monitoring/               # Nova pasta para monitoramento de recursos
+    │   │   ├── resource_monitor.py    # Monitoramento de CPU, GPU, TPU, QPU, etc.
+    │   │   ├── treemap_visualization.py # Função para gerar o treemap
+    │
+    ├── tests/
+    │   ├── test_quantum_simulator.py
+    │   ├── test_classical_simulator.py
+    │   └── test_prediction_models.py
+    │
+    ├── notebooks/
+    │   ├── temperature_analysis.ipynb
+    │   └── quantum_model_experiments.ipynb
+    │
+    ├── requirements.txt
+    ├── Dockerfile
+    ├── README.md
+    └── .gitignore
 
 Detalhamento dos Arquivos Adicionados/Atualizados:
 
 1. resource_monitor.py (Novo arquivo em src/monitoring/): Esse script será responsável por coletar informações de temperatura, consumo de CPU, memória e energia de cada núcleo da CPU, TPU, GPU e QPU, utilizando bibliotecas como psutil, gpustat e outras para capturar os dados de recursos de hardware.
-
-
-
-import psutil
-import gpustat
-import datetime
-
-def get_system_resources():
-    # Captura a utilização de CPU, memória e temperatura
-    cpu_usage = psutil.cpu_percent(interval=1)
-    memory_info = psutil.virtual_memory()
-    memory_usage = memory_info.percent
-    cpu_temperature = psutil.sensors_temperatures().get('coretemp', [])
-
-    # Captura a utilização de GPU usando gpustat
-    gpu_stats = gpustat.new_query()
-
-    # Formatação dos dados
-    resources = {
-        'cpu_usage': cpu_usage,
-        'memory_usage': memory_usage,
-        'cpu_temperature': cpu_temperature[0].current if cpu_temperature else None,
-        'gpu_usage': gpu_stats.gpus[0].memory_used,  # Exemplo de GPU, pode ser ajustado para múltiplas GPUs
-        'gpu_memory_total': gpu_stats.gpus[0].memory_total,
-        'timestamp': datetime.datetime.now().isoformat()
-    }
-
-    return resources
+    
+    
+    
+    import psutil
+    import gpustat
+    import datetime
+    
+    def get_system_resources():
+        # Captura a utilização de CPU, memória e temperatura
+        cpu_usage = psutil.cpu_percent(interval=1)
+        memory_info = psutil.virtual_memory()
+        memory_usage = memory_info.percent
+        cpu_temperature = psutil.sensors_temperatures().get('coretemp', [])
+    
+        # Captura a utilização de GPU usando gpustat
+        gpu_stats = gpustat.new_query()
+    
+        # Formatação dos dados
+        resources = {
+            'cpu_usage': cpu_usage,
+            'memory_usage': memory_usage,
+            'cpu_temperature': cpu_temperature[0].current if cpu_temperature else None,
+            'gpu_usage': gpu_stats.gpus[0].memory_used,  # Exemplo de GPU, pode ser ajustado para múltiplas GPUs
+            'gpu_memory_total': gpu_stats.gpus[0].memory_total,
+            'timestamp': datetime.datetime.now().isoformat()
+        }
+    
+        return resources
 
 2. treemap_visualization.py (Novo arquivo em src/monitoring/): Este script usará uma biblioteca como plotly para criar um treemap visual com as informações de temperatura, consumo de CPU, memória e energia.
 
