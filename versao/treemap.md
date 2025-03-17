@@ -42,18 +42,18 @@ Detalhamento dos Arquivos Adicionados/Atualizados:
     
     
     
-    import psutil
-    import gpustat
-    import datetime
-    
-    def get_system_resources():
-        # Captura a utilização de CPU, memória e temperatura
-        cpu_usage = psutil.cpu_percent(interval=1)
-        memory_info = psutil.virtual_memory()
-        memory_usage = memory_info.percent
-        cpu_temperature = psutil.sensors_temperatures().get('coretemp', [])
-    
-        # Captura a utilização de GPU usando gpustat
+        import psutil
+        import gpustat
+        import datetime
+        
+        def get_system_resources():
+            # Captura a utilização de CPU, memória e temperatura
+            cpu_usage = psutil.cpu_percent(interval=1)
+            memory_info = psutil.virtual_memory()
+            memory_usage = memory_info.percent
+            cpu_temperature = psutil.sensors_temperatures().get('coretemp', [])
+        
+            # Captura a utilização de GPU usando gpustat
         gpu_stats = gpustat.new_query()
     
         # Formatação dos dados
